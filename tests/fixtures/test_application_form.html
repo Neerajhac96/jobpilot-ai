@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Test Form</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; }
+        .field { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], textarea, select { width: 100%; padding: 8px; }
+        .inline-label { display: inline; font-weight: normal; }
+    </style>
+</head>
+<body>
+    <h1>Apply for Junior Data Analyst</h1>
+    <form action="/submit" method="POST">
+        <!-- text inputs -->
+        <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+        </div>
+        <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname">
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+
+        <!-- file input -->
+        <div class="field">
+            <label for="resume">Resume / CV Upload</label>
+            <input type="file" id="resume" name="resume">
+        </div>
+        
+        <!-- textareas -->
+        <div class="field">
+            <label for="cover_letter">Cover Letter</label>
+            <textarea id="cover_letter" name="cover_letter" rows="5"></textarea>
+        </div>
+        <div class="field">
+            <label for="why_hire">Why should we hire you?</label>
+            <textarea id="why_hire" name="why_hire" rows="3"></textarea>
+        </div>
+        
+        <!-- checkbox & radio -->
+        <div class="field">
+            <label>Work Authorization</label>
+            <input type="radio" id="auth_yes" name="work_auth" value="yes"> <label for="auth_yes" class="inline-label">Yes</label>
+            <input type="radio" id="auth_no" name="work_auth" value="no"> <label for="auth_no" class="inline-label">No</label>
+        </div>
+        <div class="field">
+            <label for="relocate">Willing to relocate?</label>
+            <input type="checkbox" id="relocate" name="relocate" value="yes">
+        </div>
+
+        <!-- Sensitive Fields -->
+        <div class="field">
+            <label for="hispanic_ethnicity">Are you Hispanic/Latino?</label>
+            <select id="hispanic_ethnicity" name="hispanic_ethnicity">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender">
+        </div>
+        <div class="field">
+            <label for="veteran_status">Veteran Status</label>
+            <input type="text" id="veteran_status" name="veteran_status">
+        </div>
+        <div class="field">
+            <label for="disability_status">Disability Status</label>
+            <input type="text" id="disability_status" name="disability_status">
+        </div>
+        
+        <!-- Links -->
+        <div class="field">
+            <label for="linkedin_url">LinkedIn URL</label>
+            <input type="url" id="linkedin_url" name="linkedin_url">
+        </div>
+        <div class="field">
+            <label for="github_url">GitHub URL</label>
+            <input type="url" id="github_url" name="github_url">
+        </div>
+        <div class="field">
+            <label for="website_ambiguous">Website</label>
+            <input type="url" id="website_ambiguous" name="website_ambiguous">
+        </div>
+
+        <!-- select -->
+        <div class="field">
+            <label for="notice">Notice Period</label>
+            <select id="notice" name="notice">
+                <option value="">Select one</option>
+                <option value="immediate">Immediate</option>
+                <option value="15 days">15 days</option>
+                <option value="30 days">30 days</option>
+            </select>
+        </div>
+        
+        <div class="field">
+            <label for="salary">Salary Expectation</label>
+            <input type="text" id="salary" name="salary">
+        </div>
+        <div class="field">
+            <label for="location">Location Preference</label>
+            <input type="text" id="location" name="location">
+        </div>
+
+        <!-- unknown question -->
+        <div class="field">
+            <label for="unknown_q">What is your favorite color?</label>
+            <input type="text" id="unknown_q" name="unknown_q">
+        </div>
+        
+        <!-- ambiguous question -->
+        <div class="field">
+            <label for="ambiguous_contact">Contact (Phone or Email)</label>
+            <input type="text" id="ambiguous_contact" name="ambiguous_contact">
+        </div>
+        
+        <!-- submit -->
+        <button type="submit" id="submitBtn">Submit Application</button>
+    </form>
+</body>
+</html>

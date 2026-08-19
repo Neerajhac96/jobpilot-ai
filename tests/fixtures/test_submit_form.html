@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form - Local Test</title>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Apply for Job</h1>
+        <form id="applicationForm" action="javascript:void(0);" onsubmit="document.getElementById('form-container').innerHTML = '<h2>Application submitted successfully</h2>';">
+            
+            <div class="field">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="field">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="field">
+                <label for="resume">Resume / CV Upload</label>
+                <input type="file" id="resume" name="resume" required>
+            </div>
+            
+            <div class="field">
+                <label for="website_ambiguous">Website</label>
+                <input type="url" id="website_ambiguous" name="website_ambiguous" required>
+            </div>
+            
+            <!-- Optional unknown field -->
+            <div class="field">
+                <label for="unknown_q">What is your favorite color?</label>
+                <input type="text" id="unknown_q" name="unknown_q">
+            </div>
+
+            <!-- submit -->
+            <div class="field">
+                <input type="submit" value="Submit Application" id="submit_btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
